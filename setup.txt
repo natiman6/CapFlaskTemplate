@@ -136,7 +136,6 @@ Then add the address and the password the secrets file that is in the utils fold
 
 Finally, for the email recovery using a gmail account to work you need to turn on "less secure apps" 
 here https://myaccount.google.com/lesssecureapps.
-
 You should be ready to go!
 
 Run the main.py file. 
