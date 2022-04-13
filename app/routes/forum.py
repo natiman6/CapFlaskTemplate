@@ -97,6 +97,7 @@ def postNew():
             subject = form.subject.data,
             content = form.content.data,
             author = current_user.id,
+            importance = form.importance.data,
             # This sets the modifydate to the current datetime.
             modifydate = dt.datetime.utcnow
         )

@@ -34,7 +34,8 @@ def profileEdit():
         currUser.update(
             lname = form.lname.data,
             fname = form.fname.data,
-            role = form.role.data
+            role = form.role.data,
+            fav_color = form.fav_color.data
         )
         # This updates the profile image
         if form.image.data:

@@ -35,6 +35,17 @@
                 {% endif %}
                 {{post.subject}}
             </div>
+            <div class="col">
+                {% if loop.index == 1 %}
+                    <h3 class="display-5">Importance Rate</h3>
+                {% endif %}
+                {{post.importance}}
+            </div>
+            <div class="col">
+                <form action="{{ url_for('postDelete', postID = post.id) }}">
+                    <button>Delete</button>
+                </form>
+            </div>
         </div>
     {% endfor %}
 {% else %}

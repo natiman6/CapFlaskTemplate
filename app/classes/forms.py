@@ -59,11 +59,13 @@ class ProfileForm(FlaskForm):
     image = FileField("Image") 
     submit = SubmitField('Post')
     role = SelectField('Role',choices=[("Teacher","Teacher"),("Student","Student")])
-    fav_color = SelectField('fav_color',choices=[("Teacher","Teacher"),("Student","Student")])
+    fav_color = StringField('Favorite Color',validators=[DataRequired()])
+
 class PostForm(FlaskForm):
     subject = StringField('Subject', validators=[DataRequired()])
     content = TextAreaField('Post', validators=[DataRequired()])
     submit = SubmitField('Post')
+    importance = SelectField('Importance Rate', choices=[("5","5"),("4","4"),("3","3"),("2","2"),("1","1")])
 
 class CommentForm(FlaskForm):
     content = TextAreaField('Comment', validators=[DataRequired()])
