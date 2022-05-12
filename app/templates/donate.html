@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+
+
+
+</style>
+
+<h1>How much would you like to donate?</h1>
+
+
+{% for i in range(4) %}
+<form action="{{ url_for('info', amount = 25*(i+1)) }}">
+    <input type="submit" value="${{ (i+1)*25 }}">
+</form>
+{% endfor %}
+
+<form action="{{ url_for('info', amount = 0) }}">
+    <input type="submit" value="Other">
+</form>
+
+
+{% endblock %}

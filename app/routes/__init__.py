@@ -4,3 +4,5 @@ from .forum import *
 from .mail import *
 from .user import *
 from .article import *
+from .hunger import *
+

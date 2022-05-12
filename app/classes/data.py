@@ -7,7 +7,7 @@
 from app import app
 from flask import flash
 from flask_login import UserMixin
-from mongoengine import FileField, EmailField, StringField, ReferenceField, DateTimeField, CASCADE
+from mongoengine import FileField, EmailField, IntField, StringField, ReferenceField, DateTimeField, CASCADE
 from flask_mongoengine import Document
 from werkzeug.security import generate_password_hash, check_password_hash
 import datetime as dt
@@ -70,3 +70,22 @@ class Comment(Document):
     meta = {
         'ordering': ['-createdate']
     }
+
+class Article(Document):
+    search = StringField()
+
+class Donations(Document):
+    amount = IntField()
+    fname = StringField()
+    lname = StringField()
+    country = StringField()
+    address = StringField()
+    city = StringField()
+    state = StringField()
+    zip = IntField()
+    phone_number = IntField()
+    currency = StringField()
+    card_number = IntField()
+    cvv = StringField()
+    month = StringField()
+    year = StringField()

@@ -1,3 +1,8 @@
-.bottom-image img{
-    vertical-align:bottom;
-    }
+.body {
+    background-color: aqua;
+}
+
+.text {
+    color: white;
+    background-color: black;
+}
